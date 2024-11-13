@@ -43,7 +43,6 @@ class JWTAuthController extends Controller
                 return response()->json(['error' => 'Invalid credentials'], 401);
             }
 
-            // Get the authenticated user.
             $user = auth()->user();
 
             return response()->json(compact('token'));
